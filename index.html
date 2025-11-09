@@ -8,6 +8,41 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js"></script>
+    <div id='container'>
+        <div id='left-side'>
+            <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=KEY
+                &q=Surat,India">
+            </iframe>
+        </div>
+        <div id='right-side'>
+            <div id = "search_box"> 
+            <form action="">
+            <label for="city_name">First name:</label>
+            <input type="text" id="city_name" name="city_name"><br><br>
+            <input type="submit" id = "submit_button" value="Bon Voyage">
+            </form>
+            </div>
+            
+            <div id = "error_container" class="hidden"> 
+
+            </div> 
+            <h1 id = "heading">Surat, India </h1>
+            <div id = "picture-gallery"> 
+                <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+                    key: "KEY",
+                    v: "weekly"
+                });</script>
+            </div>
+        </div>
+    </div>
+    
+<script src="script.js"></script>
 </body>
 </html>
